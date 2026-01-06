@@ -3,97 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gaurav Hadavale | Research & AI</title>
+  <title>Gaurav Hadavale | AI Interpretability</title>
   <style>
     :root {
-      --bg: #0f1220;
-      --card: #171a2e;
-      --text: #e6e8ff;
-      --muted: #a6abff;
-      --accent: #6c7bff;
+      --bg: #0e1117;
+      --card: #161b22;
+      --text: #e6edf3;
+      --muted: #9da7b3;
+      --accent: #58a6ff;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: linear-gradient(180deg, #0f1220, #0b0d18);
+      background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
     }
     header {
-      min-height: 90vh;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 4rem 1.5rem;
-    }
-    header h1 {
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      margin: 0 0 1rem;
-      letter-spacing: -0.02em;
-    }
-    header p {
-      max-width: 680px;
-      font-size: 1.1rem;
-      color: var(--muted);
-    }
-    .cta {
-      margin-top: 2rem;
+      min-height: 85vh;
       display: flex;
-      gap: 1rem;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
+      text-align: center;
+      padding: 3rem 1.5rem;
     }
-    .btn {
-      padding: 0.75rem 1.2rem;
-      border-radius: 999px;
-      background: var(--accent);
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-      box-shadow: 0 10px 30px rgba(108,123,255,0.3);
+    header img {
+      max-width: 100%;
     }
-    .btn.secondary {
-      background: transparent;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      box-shadow: none;
-    }
-    .btn:hover {
-      transform: translateY(-2px);
+    header h3 {
+      font-weight: 500;
+      color: var(--muted);
+      margin-top: 1.5rem;
     }
     section {
-      max-width: 1100px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 4rem 1.5rem;
+      padding: 3.5rem 1.5rem;
     }
     section h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.9rem;
+      margin-bottom: 1.2rem;
       letter-spacing: -0.02em;
-    }
-    .grid {
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
     .card {
       background: var(--card);
-      border-radius: 16px;
-      padding: 1.5rem;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+      border-radius: 14px;
+      padding: 1.6rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
     }
-    .card h3 {
-      margin-top: 0;
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.2rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.75rem;
+      border-bottom: 1px solid #30363d;
+      vertical-align: top;
+    }
+    th {
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+      margin-top: 1.2rem;
     }
     footer {
       text-align: center;
-      padding: 2rem 1.5rem 3rem;
+      padding: 2.5rem 1.5rem 3rem;
       color: var(--muted);
       font-size: 0.9rem;
     }
-    a.link {
+    a {
       color: var(--accent);
       text-decoration: none;
       font-weight: 600;
@@ -102,95 +96,90 @@
 </head>
 <body>
 
-  <!-- HERO -->
-  <header>
-    <h1>Gaurav Hadavale</h1>
+<header>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Hi%2C+I'm+Gaurav+Hadavale;Undergraduate+Student+Exploring+AI;Interpretability+%26+Medical+AI;Understanding+How+Models+Make+Decisions;Building+Reliable+ML+Systems" alt="Typing SVG" />
+  <h3>Undergraduate Student | AI Interpretability | Medical Imaging</h3>
+</header>
+
+<section>
+  <h2>🧠 About Me</h2>
+  <div class="card">
+    <p>I’m an undergraduate researcher focused on understanding <strong>how machine learning models actually make decisions</strong>, especially in high‑stakes domains like medical imaging.</p>
+    <p>I prioritize interpretability, causal testing, and failure analysis over leaderboard chasing. My work spans vision and language models, with an emphasis on <em>auditing model reasoning</em> rather than trusting accuracy alone.</p>
+  </div>
+</section>
+
+<section>
+  <h2>🔍 Current Research Directions</h2>
+  <div class="card">
+    <ul>
+      <li>Mechanistic interpretability and activation steering in transformer models</li>
+      <li>Shortcut learning diagnosis in medical imaging systems</li>
+      <li>Causal and counterfactual analysis beyond post‑hoc explanations</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>🧪 Research Projects</h2>
+  <div class="card">
+    <table>
+      <thead>
+        <tr><th>Project</th><th>Focus</th><th>Outcome</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Beyond Accuracy: CXR Audit</strong></td>
+          <td>Interpretability‑driven audit of DenseNet‑121 pneumonia models</td>
+          <td>Identified Clever‑Hans artifacts; improved specificity from 0.49 → 0.86</td>
+        </tr>
+        <tr>
+          <td><strong>Latent Counterfactuals in LMs</strong></td>
+          <td>Activation‑level causal interventions in GPT‑2</td>
+          <td>Demonstrated systematic behavioral shifts via concept‑aligned steering</td>
+        </tr>
+        <tr>
+          <td><strong>Deepfake Forensics</strong></td>
+          <td>Frequency‑domain artifacts in GAN‑generated images</td>
+          <td>97% validation accuracy using FFT‑guided ConvNeXt</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>📄 Resume</h2>
+  <div class="card" style="padding:0; overflow:hidden">
+    <iframe src="Gaurav_Hadavale_resume_1.pdf" width="100%" height="750" style="border:none"></iframe>
+  </div>
+</section>
+
+<section>
+  <h2>🛠️ Technical Stack</h2>
+  <div class="badges">
+    <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+    <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
+    <img src="https://img.shields.io/badge/TransformerLens-000000?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/Explainable%20AI-4B0082?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/Medical%20Imaging-1E90FF?style=for-the-badge" />
+  </div>
+</section>
+
+<section>
+  <h2>📫 Contact</h2>
+  <div class="card" style="text-align:center">
     <p>
-      Undergraduate researcher focused on Machine Learning, Explainable AI, and
-      reliability auditing of models — especially in medical and scientific domains.
+      <a href="mailto:hadavalegaurav@gmail.com">Email</a> ·
+      <a href="https://github.com/YOUR-GITHUB">GitHub</a> ·
+      <a href="https://linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a>
     </p>
-    <div class="cta">
-      <a href="#projects" class="btn">View Projects</a>
-      <a href="#contact" class="btn secondary">Contact</a>
-    </div>
-  </header>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About</h2>
-    <div class="card">
-      <p>
-        I work at the intersection of Machine Learning and research methodology.
-        My interests include explainability beyond visualization, causal auditing
-        of models, and identifying shortcut learning in high‑stakes settings like
-        healthcare.
-      </p>
-      <p>
-        My long‑term goal is to pursue research‑oriented roles and fully funded
-        internships in AI/ML, with a focus on trustworthy and interpretable systems.
-      </p>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Selected Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Explainable AI Audit for Medical Imaging</h3>
-        <p>
-          Audited a chest X‑ray classification model and identified shortcut
-          learning driven by radiographic text markers rather than pathology.
-        </p>
-        <p>
-          Used explanation‑guided interventions to mitigate the failure and
-          improve specificity while preserving AUROC.
-        </p>
-      </div>
-      <div class="card">
-        <h3>AI Placebo Effect in Human–AI Interaction</h3>
-        <p>
-          Designed a prototype to study how explanations influence user trust and
-          confidence, even when objective model performance remains unchanged.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Mechanistic Interpretability Experiments</h3>
-        <p>
-          Explored activation‑level interventions to study how internal
-          representations affect downstream reasoning behavior in language models.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2>Focus Areas</h2>
-    <div class="grid">
-      <div class="card">Machine Learning & Deep Learning</div>
-      <div class="card">Explainable & Responsible AI</div>
-      <div class="card">Medical Imaging & Healthcare AI</div>
-      <div class="card">Research Prototyping & Experiment Design</div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="card">
-      <p>
-        Email: <span class="link">your.email@example.com</span><br />
-        GitHub: <span class="link">github.com/yourusername</span><br />
-        LinkedIn: <span class="link">linkedin.com/in/yourprofile</span>
-      </p>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 Gaurav Hadavale · Built with curiosity and caffeine
-  </footer>
+<footer>
+  © 2026 Gaurav Hadavale · Interpretability before accuracy
+</footer>
 
 </body>
 </html>
-
