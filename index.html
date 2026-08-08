@@ -28,18 +28,26 @@
     <main>
       <section class="section">
         <h2>About &amp; Research Interests</h2>
-        <p>I'm a final-year B.Tech student at the University of Mumbai, currently interning at A*STAR Singapore. I believe that as frontier models advance rapidly, society remains dangerously unprepared for the risks. My work focuses on closing this gap by building rigorous, mechanistic evaluations for multimodal systems to ensure they are genuinely aligned, not just superficially competent.</p>
-        <ul class="interests-list">
-          <li><strong>Core Focus:</strong> Technical AI Safety, Mechanistic Interpretability, Algorithmic Auditing</li>
-          <li><strong>Applications:</strong> Multimodal Foundation Models (LVLMs), Diagnostic Robustness, Shortcut Discovery</li>
-        </ul>
+        <p>I am a final-year B.Tech student at the University of Mumbai, currently interning at A*STAR Singapore, driven by a singular goal: ensuring that as artificial intelligence systems scale in power and capability, they remain fundamentally safe, interpretable, and aligned with human values.</p>
+        
+        <p><strong>Why AI Safety Matters:</strong> We are witnessing an unprecedented acceleration in AI capabilities. Frontier models are rapidly matching and exceeding human performance across complex domains. However, society remains dangerously unprepared for the risks these systems pose. When models are deployed as "black boxes," their high accuracy on benchmarks often masks dangerous failure modes, such as relying on superficial shortcuts rather than genuine reasoning. In high-stakes settings like healthcare, mistaken confidence driven by these uninterpretable shortcuts can lead to catastrophic, systemic failures. The gap between how fast AI is advancing and how fast the safety workforce is growing is the most dangerous mismatch of our time.</p>
+        
+        <p><strong>My Approach:</strong> My research directly targets this gap by moving beyond standard accuracy metrics. I focus on Technical AI Safety and Mechanistic Interpretability—opening the black box to understand <em>how</em> models make decisions. Instead of trusting a model because it achieves high scores, I build rigorous, mechanistic evaluations and algorithmic audits to probe for semantic grounding failures. By designing matched counterfactual probes, performing causal interventions on model activations, and using tools like Sparse Autoencoders (SAEs), I aim to make failure modes legible before models reach deployment.</p>
+        
+        <p><strong>How My Projects Tackle This:</strong> My current work interrogates whether multimodal foundation models (LVLMs) actually use the reasoning pathways they appear to use. I demonstrate that models with high accuracy are often collapsing to pre-training priors and tokenizer scaffolding rather than genuinely synthesizing visual and textual evidence. By identifying these shortcut mechanisms at the activation layer, my research provides the necessary auditing tools to block unsafe models from deployment and guides the development of genuinely robust systems.</p>
       </section>
 
       <section class="section">
-        <h2>Projects</h2>
-        <div class="project-card" style="margin-bottom: 2rem;">
+        <h2>Publications</h2>
+        
+        <div class="project-card" style="margin-bottom: 2rem; border-color: var(--accent-color);">
           <h3>Reading Between the Lesions: Auditing Whether Multimodal Dermatology Classifiers Actually Use Clinical Text</h3>
-          <p class="project-meta">Accepted to MICCAI 2026 · Mechanistic Interpretability for Medical Foundation Models Workshop</p>
+          <p class="project-meta" style="color: #fff; font-weight: bold; font-size: 1rem; margin-bottom: 0.5rem;">
+            ACCEPTED AT MICCAI MECHANISTIC INTERPRETABILITY FOR MEDICAL FOUNDATION MODELS 2026 (FRANCE)
+          </p>
+          <p class="project-meta" style="color: var(--accent-color); font-weight: bold; font-size: 1rem;">
+            [TRAVEL GRANT NEEDED TO PRESENT]
+          </p>
           <p>A mechanistic audit asking a safety-critical question: when a multimodal classifier scores well, is clinical text actually driving the decision—or are priors, token scaffolding, and shortcuts? I designed matched counterfactual probes, ablations, and Top-K sparse autoencoders on fused representations to investigate this.</p>
           <ul>
             <li><strong>Semantic grounding fails:</strong> Aligned clinical text decreased the correct-class margin (−0.0102 mean shift).</li>
@@ -49,25 +57,26 @@
           <a href="https://github.com/gauravhadavale07" class="btn" target="_blank" rel="noopener noreferrer">View Code &amp; Experiments</a>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" style="margin-bottom: 2rem;">
           <h3>Causal Auditing of Latent Affect in Language Models via Activation Steering</h3>
           <p class="project-meta">TechRxiv Preprint, 2025</p>
           <p>Mechanistic interpretability and inference-time steering without retraining. This project involves applying mechanistic interpretability to isolate internal failure modes and causal drivers within the model's hidden layers, and developing a steering mechanism to enforce model safety constraints.</p>
           <a href="https://www.techrxiv.org/doi/10.36227/techrxiv.176823105.52829404" class="btn" target="_blank" rel="noopener noreferrer">View Preprint</a>
         </div>
-      </section>
 
-      <section class="section">
-        <h2>Selected Publications &amp; Preprints</h2>
-        <div class="publication">
+        <div class="project-card" style="margin-bottom: 2rem;">
           <h3>Beyond Accuracy: An Interpretability-Driven Audit of Deep Learning Models for Pneumonia Detection from Chest X-Rays</h3>
-          <p>Accepted for Scientific Poster, European Congress of Radiology (ECR) 2026. Artifact-driven shortcut discovery in clinical imaging.</p>
-          <p style="margin-top: 0.5rem;"><a href="https://dx.doi.org/10.26044/ecr2026/C-30021" target="_blank" rel="noopener noreferrer">View ECR 2026 Poster</a></p>
+          <p class="project-meta">Accepted for Scientific Poster, European Congress of Radiology (ECR) 2026</p>
+          <p>Artifact-driven shortcut discovery in clinical imaging.</p>
+          <a href="https://dx.doi.org/10.26044/ecr2026/C-30021" class="btn" target="_blank" rel="noopener noreferrer">View ECR 2026 Poster</a>
         </div>
-        <div class="publication">
+
+        <div class="project-card">
           <h3>Manifold-Constrained Counterfactual Explanations for Medical Diagnostics</h3>
-          <p>Research Project, 2025. Biologically constrained counterfactuals for diagnostic verification.</p>
+          <p class="project-meta">Research Project, 2025</p>
+          <p>Biologically constrained counterfactuals for diagnostic verification.</p>
         </div>
+
       </section>
     </main>
 
