@@ -169,9 +169,11 @@ main {
 .hero-portrait {
   margin: 0;
   position: relative;
-  justify-self: stretch;
-  align-self: stretch;
-  min-height: 420px;
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1;
   overflow: hidden;
   border-radius: calc(var(--radius) + 6px);
   box-shadow: var(--shadow);
