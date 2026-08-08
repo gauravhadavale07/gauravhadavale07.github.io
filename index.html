@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gaurav Hadavale — independent researcher building mechanistic audits for multimodal AI systems. Technical AI safety, interpretability, and deployment-blocking failure discovery.">
+  <title>Gaurav Hadavale · Mechanistic AI Safety</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#">Gaurav Hadavale</a>
+    <nav aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#funding">Funding</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">Technical AI Safety · Mechanistic Interpretability</p>
+        <h1 class="reveal">Gaurav Hadavale</h1>
+        <p class="hero-lede reveal">
+          I build practical audits that test whether multimodal models genuinely use evidence—or only look like they do.
+          My work targets shortcut learning, semantic grounding failures, and deployment-blocking failure modes before high-stakes deployment.
+        </p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#funding">Support MICCAI presentation</a>
+          <a class="btn btn-ghost" href="https://github.com/gauravhadavale07" target="_blank" rel="noopener noreferrer">View code</a>
+        </div>
+      </div>
+
+      <figure class="hero-portrait reveal">
+        <img src="assets/profile.png" alt="Portrait of Gaurav Hadavale" width="560" height="560">
+      </figure>
+    </section>
+
+    <section class="section metrics" aria-label="Research snapshot">
+      <div class="metric reveal">
+        <span class="metric-value">2</span>
+        <span class="metric-label">Sole-authored international acceptances</span>
+      </div>
+      <div class="metric reveal">
+        <span class="metric-value">5</span>
+        <span class="metric-label">Fusion architectures audited end-to-end</span>
+      </div>
+      <div class="metric reveal">
+        <span class="metric-value">0%</span>
+        <span class="metric-label">LLaVA-Med flip rate under contradictory clinical text</span>
+      </div>
+      <div class="metric reveal">
+        <span class="metric-value">MICCAI</span>
+        <span class="metric-label">Accepted · MI4MedFM Workshop · Strasbourg 2026</span>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-head reveal">
+        <p class="eyebrow">Active project</p>
+        <h2>Reading Between the Lesions</h2>
+        <p class="section-intro">
+          A mechanistic audit asking a safety-critical question: when a multimodal classifier scores well,
+          is clinical text actually driving the decision—or are priors, token scaffolding, and shortcuts?
+        </p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-main reveal">
+          <div class="project-tag">Accepted · MICCAI 2026 · Mechanistic AI Safety for Medical Foundation Models</div>
+          <h3>Auditing whether multimodal dermatology classifiers actually use clinical text</h3>
+          <p>
+            High multimodal accuracy is often treated as evidence of grounded reasoning. I test that claim directly
+            with matched counterfactual probes, ablations, activation patching, Top-K sparse autoencoders on fused
+            representations, and foundation-model escalation to LLaVA-Med.
+          </p>
+          <ul class="finding-list">
+            <li>
+              <strong>Semantic grounding fails the margin test.</strong>
+              Aligned clinical text decreased the correct-class margin (−0.0102 mean shift), not improved it.
+            </li>
+            <li>
+              <strong>Text presence ≠ text meaning.</strong>
+              Ablation probes and shuffle controls expose reliance on lexical scaffolding over clinical semantics.
+            </li>
+            <li>
+              <strong>Mechanistic shortcut features.</strong>
+              SAE Feature 1449 behaves like a peripheral-context sensitivity probe, not semantic integration.
+            </li>
+            <li>
+              <strong>Foundation-model collapse.</strong>
+              LLaVA-Med shows 0% prediction flips under explicitly contradictory histories—consistent with pretraining priors dominating integration.
+            </li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/gauravhadavale07" target="_blank" rel="noopener noreferrer">Code &amp; experiments</a>
+            <a href="#funding">Presentation funding</a>
+          </div>
+        </article>
+
+        <aside class="project-aside reveal">
+          <h4>Why this is AI safety work</h4>
+          <p>
+            The failure mode is general: systems can appear multimodally competent while failing basic counterfactual
+            update tests. That gap between performance and mechanism is exactly what makes premature deployment dangerous.
+          </p>
+          <div class="checklist">
+            <span>Lesion-disjoint leakage audits</span>
+            <span>Matched 2×2 grounding controls</span>
+            <span>Neutral / blank / contradictory probes</span>
+            <span>SAE-based shortcut discovery</span>
+            <span>LVLM counterfactual traps</span>
+          </div>
+          <p class="aside-note">
+            Dermatology is the testbed. The target is a reusable audit stack for vision-language systems in high-stakes settings.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section research-band" id="research">
+      <div class="section-head reveal">
+        <p class="eyebrow">Research program</p>
+        <h2>Mechanistic audits before deployment</h2>
+      </div>
+
+      <div class="research-grid">
+        <article class="research-card reveal">
+          <span class="card-index">01</span>
+          <h3>Behavioural grounding tests</h3>
+          <p>
+            Matched counterfactual designs, blank/neutral/shuffled text probes, and flip-rate metrics that separate
+            apparent multimodal gains from genuine semantic integration.
+          </p>
+        </article>
+        <article class="research-card reveal">
+          <span class="card-index">02</span>
+          <h3>Internal mechanism tracing</h3>
+          <p>
+            Activation patching, residual-stream SAEs, and causal interventions to identify shortcut circuits and
+            test whether internal features can be manipulated interpretably.
+          </p>
+        </article>
+        <article class="research-card reveal">
+          <span class="card-index">03</span>
+          <h3>Foundation-model escalation</h3>
+          <p>
+            Escalating audits from discriminative fusion models to instruction-tuned LVLMs, including steering tests
+            and syntactic-prior collapse diagnostics.
+          </p>
+        </article>
+        <article class="research-card reveal">
+          <span class="card-index">04</span>
+          <h3>Deployment-blocking reporting</h3>
+          <p>
+            A minimal checklist—leakage controls, tabular baselines, subgroup reliability, shortcut reporting—so
+            aggregate AUROC cannot hide mechanism failure.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
+      <div class="section-head reveal">
+        <p class="eyebrow">Publications &amp; preprints</p>
+        <h2>Selected work</h2>
+      </div>
+
+      <div class="pub-list">
+        <article class="pub-item reveal">
+          <div class="pub-year">2026</div>
+          <div class="pub-body">
+            <h3>Reading Between the Lesions: Auditing Whether Multimodal Dermatology Classifiers Actually Use Clinical Text</h3>
+            <p>MICCAI Mechanistic Interpretability for Medical Foundation Models Workshop · Sole author · Accepted</p>
+          </div>
+        </article>
+
+        <article class="pub-item reveal">
+          <div class="pub-year">2026</div>
+          <div class="pub-body">
+            <h3>Beyond Accuracy: An Interpretability-Driven Audit of Deep Learning Models for Pneumonia Detection from Chest X-Rays</h3>
+            <p>TechRxiv · Accepted for ECR 2026 Scientific Poster · Artifact-driven shortcut discovery in clinical imaging</p>
+          </div>
+        </article>
+
+        <article class="pub-item reveal">
+          <div class="pub-year">2025</div>
+          <div class="pub-body">
+            <h3>Causal Auditing of Latent Affect in Language Models via Activation Steering</h3>
+            <p>TechRxiv · Mechanistic interpretability and inference-time steering without retraining</p>
+          </div>
+        </article>
+
+        <article class="pub-item reveal">
+          <div class="pub-year">2025</div>
+          <div class="pub-body">
+            <h3>Manifold-Constrained Counterfactual Explanations for Medical Diagnostics</h3>
+            <p>Research project · Biologically constrained counterfactuals for diagnostic verification</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section about-band">
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="eyebrow">About</p>
+          <h2>Independent researcher, shipping audits from India</h2>
+          <p>
+            Final-year B.Tech student at the University of Mumbai (Electronics &amp; Telecommunication, minor in AI &amp; ML).
+            Currently interning at A*STAR Singapore on trustworthy evaluation of AI systems—mechanistic interpretability,
+            multimodal auditing, shortcut discovery, and semantic grounding failures.
+          </p>
+          <p>
+            I design and execute experiments end-to-end: fusion baselines, matched counterfactual audits, ablations,
+            activation analysis, SAE interpretation, and LVLM stress tests. My aim is to make failure modes legible
+            before models reach deployment in settings where mistaken confidence is costly.
+          </p>
+        </div>
+
+        <div class="about-facts reveal">
+          <div class="fact">
+            <span class="fact-label">Education</span>
+            <span class="fact-value">University of Mumbai · AI &amp; ML minor · Grade A (9.0/10)</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Current role</span>
+            <span class="fact-value">Research intern · A*STAR Singapore · Trustworthy AI evaluation</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Recognition</span>
+            <span class="fact-value">Amazon ML Summer School · JEE Advanced (top 2.5%) · IEEE AESS Technical Lead</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Tools</span>
+            <span class="fact-value">PyTorch · TransformerLens · SAE training · causal interventions · multimodal fusion pipelines</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section funding-section" id="funding">
+      <div class="funding-shell reveal">
+        <div class="funding-copy">
+          <p class="eyebrow">Concrete bottleneck · money unlocks impact</p>
+          <h2>Help me present accepted safety research at MICCAI</h2>
+          <p>
+            My sole-authored paper is accepted. The experiments are done. The code will be public. What I lack is travel
+            funding—and without it, I may have to withdraw from presenting work that is already complete.
+          </p>
+          <p>
+            I missed presenting a similarly sole-authored international paper at ECR Vienna earlier this year for the
+            same reason. Schengen visa applications close <strong>August 24, 2026</strong>. Funding confirmation is the blocker.
+          </p>
+
+          <div class="budget-table" role="table" aria-label="Trip budget">
+            <div class="budget-row" role="row">
+              <span>Round-trip airfare</span><span>$778</span>
+            </div>
+            <div class="budget-row" role="row">
+              <span>Budget accommodation (5 nights)</span><span>$100</span>
+            </div>
+            <div class="budget-row" role="row">
+              <span>Conference registration</span><span>$178</span>
+            </div>
+            <div class="budget-row" role="row">
+              <span>Schengen visa fee</span><span>$156</span>
+            </div>
+            <div class="budget-row total" role="row">
+              <span>Total estimated cost</span><span>$1,212</span>
+            </div>
+          </div>
+
+          <p class="budget-note">
+            Requesting <strong>$1,000</strong> in support · contributing <strong>$212</strong> personally · workshop dates September 27 – October 1, 2026 · Strasbourg, France
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mailto:hadavalegaurav@gmail.com?subject=MICCAI%20Travel%20Support%20-%20Gaurav%20Hadavale">Email to fund or connect</a>
+            <a class="btn btn-ghost" href="https://manifund.org" target="_blank" rel="noopener noreferrer">Manifund campaign</a>
+          </div>
+        </div>
+
+        <div class="funding-impact">
+          <h3>What funding enables</h3>
+          <ul>
+            <li>Present mechanistic audit findings to MI &amp; AI safety researchers at MICCAI</li>
+            <li>Get expert feedback on matched counterfactual methodology</li>
+            <li>Find collaborators extending audits to general VLMs and pretraining-scale models</li>
+            <li>Publish an AI-safety-aligned summary, code, and experiment artifacts publicly</li>
+          </ul>
+          <p class="impact-foot">
+            This is not a plan I haven't started. The paper is accepted. The audit stack exists. Travel is the remaining bottleneck.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-shell reveal">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Open to collaborators, mentors, and funders working on mechanistic AI safety</h2>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:hadavalegaurav@gmail.com">hadavalegaurav@gmail.com</a>
+          <a href="https://github.com/gauravhadavale07" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/gaurav-hadavale-5b3a5b291/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://orcid.org/0009-0001-6571-6427" target="_blank" rel="noopener noreferrer">ORCID</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Gaurav Hadavale · Mechanistic AI safety research</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
