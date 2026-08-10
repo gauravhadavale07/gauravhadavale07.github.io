@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Gaurav Hadavale — Independent researcher in AI safety and mechanistic interpretability.">
+  <meta name="description"
+    content="Gaurav Hadavale — Independent researcher in AI safety and mechanistic interpretability.">
   <title>Gaurav Hadavale | AI Safety Researcher</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="container">
     <header class="header">
@@ -18,7 +21,8 @@
           <div class="social-links">
             <a href="mailto:gaurav.hadavale23@spit.ac.in">Email</a>
             <a href="https://github.com/gauravhadavale07" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/gaurav-hadavale-5b3a5b291/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/gaurav-hadavale-5b3a5b291/" target="_blank"
+              rel="noopener noreferrer">LinkedIn</a>
             <a href="https://orcid.org/0009-0001-6571-6427" target="_blank" rel="noopener noreferrer">ORCID</a>
           </div>
         </div>
@@ -28,48 +32,85 @@
     <main>
       <section class="section">
         <h2>About &amp; Research Interests</h2>
-        <p>I’m a final-year B.Tech student at the University of Mumbai and currently a research intern at A*STAR Singapore. While I've always been fascinated by what artificial intelligence can achieve, my primary focus has shifted to a much more urgent question: how can we actually trust what these models are doing?</p>
-        
-        <p><strong>Why AI Safety Matters to Me:</strong> We are watching AI capabilities accelerate at an incredible pace, often exceeding human performance in complex domains. But as these models become more capable, they also become more opaque. It deeply concerns me that we routinely deploy "black box" systems into high-stakes environments—like healthcare—without truly understanding how they make decisions. High accuracy on a benchmark doesn't mean a model is reasoning correctly; often, it’s just finding clever, superficial shortcuts. I believe the growing gap between AI's rapid advancement and our ability to safely interpret it is one of the most critical challenges of our time.</p>
-        
-        <p><strong>My Approach:</strong> I want to move our field beyond just chasing higher accuracy scores. My research sits at the intersection of Technical AI Safety and Mechanistic Interpretability. Instead of taking a model's output at face value, I try to open the black box. I build rigorous algorithmic audits—using matched counterfactual probes, causal interventions, and Sparse Autoencoders (SAEs)—to untangle the actual reasoning pathways inside the network. My goal is to catch dangerous failure modes and make them legible to developers <em>before</em> a model is deployed.</p>
-        
-        <p><strong>What I'm Working On:</strong> Right now, I’m investigating multimodal foundation models (LVLMs). In my recent work, I found that even when a medical AI achieves exceptional scores, it often isn't actually reading the clinical text; it's just relying on pre-training biases and lexical scaffolding. By isolating these exact shortcut mechanisms at the activation layer, I hope to provide the auditing tools necessary to catch unsafe models and ultimately guide the development of AI we can genuinely rely on.</p>
+        <p>I’m a final-year B.Tech student at the University of Mumbai and currently a research intern at A*STAR Singapore. I’ve always been interested in what AI systems can do, but my research has increasingly focused on a different question: how can we understand and trust what these models are actually doing?</p>
+
+        <p><strong>Why AI Safety Matters to Me:</strong> AI systems are becoming increasingly capable, while many of their internal mechanisms remain difficult to understand. This is particularly concerning when models are used in high-stakes settings such as healthcare. A model achieving high accuracy does not necessarily mean that it is using the information we expect it to use; it may instead rely on shortcuts, correlations, or other unintended signals.</p>
+
+        <p>I’m interested in the gap between what a model predicts and why it makes that prediction, and in whether we can develop practical methods for finding these discrepancies.</p>
+
+        <p><strong>My Approach:</strong> My research sits at the intersection of Technical AI Safety and Mechanistic Interpretability. Rather than looking only at a model’s final outputs, I use controlled interventions and activation-level analysis to investigate what information is influencing its behavior.</p>
+
+        <p>My work uses methods including matched counterfactual probes, causal interventions, activation analysis, and Sparse Autoencoders (SAEs). I’m particularly interested in developing practical audits that can reveal when a model appears to rely on information or patterns that we did not intend it to use.</p>
+
+        <p><strong>What I’m Working On:</strong> Right now, I’m investigating multimodal foundation models, particularly vision-language models. In my recent work, I used medical AI as a testbed to investigate whether models that perform well are actually using clinical text in a meaningful way.</p>
+
+        <p>I found cases where changing the accompanying clinical information did not change the model’s prediction as much as expected, suggesting that some predictions may be influenced by learned priors or superficial signals rather than the provided clinical evidence.</p>
+
+        <p>By investigating these behaviors at the activation level, I hope to develop auditing methods that can help us better understand and evaluate increasingly capable multimodal models.</p>
       </section>
 
       <section class="section">
         <h2>Publications</h2>
-        
+
         <div class="project-card" style="margin-bottom: 2rem; border-color: var(--accent-color);">
-          <h3>Reading Between the Lesions: Auditing Whether Multimodal Dermatology Classifiers Actually Use Clinical Text</h3>
+          <h3>Reading Between the Lesions: Auditing Whether Multimodal Dermatology Classifiers Actually Use Clinical
+            Text</h3>
           <p class="project-meta" style="color: #fff; font-weight: bold; font-size: 1rem; margin-bottom: 0.5rem;">
-            ACCEPTED AT MICCAI MECHANISTIC INTERPRETABILITY FOR MEDICAL FOUNDATION MODELS 2026 (FRANCE)
+            ACCEPTED AT <a href="https://mi4medfm.github.io/2026/" target="_blank" rel="noopener noreferrer"
+              style="color: inherit; text-decoration: underline;">MICCAI MECHANISTIC INTERPRETABILITY FOR MEDICAL
+              FOUNDATION MODELS 2026</a> (FRANCE)
           </p>
           <p class="project-meta" style="color: var(--accent-color); font-weight: bold; font-size: 1rem;">
             [TRAVEL GRANT NEEDED TO PRESENT]
           </p>
-          <img src="assets/Paper_acceptance.png" alt="OpenReview Paper Acceptance" style="width: 100%; border-radius: 4px; margin: 1rem 0; border: 1px solid var(--border-color);">
-          <p>A mechanistic audit asking a safety-critical question: when a multimodal classifier scores well, is clinical text actually driving the decision—or are priors, token scaffolding, and shortcuts? I designed matched counterfactual probes, ablations, and Top-K sparse autoencoders on fused representations to investigate this.</p>
+          <img src="assets/Paper_acceptance.png" alt="OpenReview Paper Acceptance"
+            style="width: 100%; border-radius: 4px; margin: 1rem 0; border: 1px solid var(--border-color);">
+          <p>A mechanistic audit asking a safety-critical question: when a multimodal classifier scores well, is
+            clinical text actually driving the decision—or are priors, token scaffolding, and shortcuts? I designed
+            matched counterfactual probes, ablations, and Top-K sparse autoencoders on fused representations to
+            investigate this.</p>
           <ul>
-            <li><strong>Semantic grounding fails:</strong> Aligned clinical text decreased the correct-class margin (−0.0102 mean shift).</li>
-            <li><strong>Text presence ≠ text meaning:</strong> Ablation probes expose reliance on lexical scaffolding over semantics.</li>
-            <li><strong>Foundation-model collapse:</strong> LLaVA-Med shows 0% prediction flips under explicitly contradictory histories.</li>
+            <li><strong>Semantic grounding fails:</strong> Aligned clinical text decreased the correct-class margin
+              (−0.0102 mean shift).</li>
+            <li><strong>Text presence ≠ text meaning:</strong> Ablation probes expose reliance on lexical scaffolding
+              over semantics.</li>
+            <li><strong>Foundation-model collapse:</strong> LLaVA-Med shows 0% prediction flips under explicitly
+              contradictory histories.</li>
           </ul>
-          <a href="https://github.com/gauravhadavale07" class="btn" target="_blank" rel="noopener noreferrer">View Code &amp; Experiments</a>
+          <a href="https://github.com/gauravhadavale07" class="btn" target="_blank" rel="noopener noreferrer">View Code
+            &amp; Experiments</a>
         </div>
 
         <div class="project-card" style="margin-bottom: 2rem;">
           <h3>Causal Auditing of Latent Affect in Language Models via Activation Steering</h3>
           <p class="project-meta">TechRxiv Preprint, 2025</p>
-          <p>Mechanistic interpretability and inference-time steering without retraining. This project involves applying mechanistic interpretability to isolate internal failure modes and causal drivers within the model's hidden layers, and developing a steering mechanism to enforce model safety constraints.</p>
-          <a href="https://www.techrxiv.org/doi/10.36227/techrxiv.176823105.52829404" class="btn" target="_blank" rel="noopener noreferrer">View Preprint</a>
+          <p>Mechanistic interpretability and inference-time steering without retraining. This project involves applying
+            mechanistic interpretability to isolate internal failure modes and causal drivers within the model's hidden
+            layers, and developing a steering mechanism to enforce model safety constraints.</p>
+          <a href="https://www.techrxiv.org/doi/10.36227/techrxiv.176823105.52829404" class="btn" target="_blank"
+            rel="noopener noreferrer">View Preprint</a>
         </div>
 
         <div class="project-card" style="margin-bottom: 2rem;">
-          <h3>Beyond Accuracy: An Interpretability-Driven Audit of Deep Learning Models for Pneumonia Detection from Chest X-Rays</h3>
-          <p class="project-meta">Accepted for Scientific Poster, European Congress of Radiology (ECR) 2026</p>
-          <p>Artifact-driven shortcut discovery in clinical imaging.</p>
-          <a href="https://dx.doi.org/10.26044/ecr2026/C-30021" class="btn" target="_blank" rel="noopener noreferrer">View ECR 2026 Poster</a>
+          <h3>Beyond Accuracy: An Interpretability-Driven Audit of Deep Learning Models for Pneumonia Detection from
+            Chest X-Rays</h3>
+          <p class="project-meta" style="color: #fff; font-weight: bold; font-size: 1rem; margin-bottom: 0.5rem;">
+            ACCEPTED FOR SCIENTIFIC POSTER, EUROPEAN CONGRESS OF RADIOLOGY (ECR) 2026
+          </p>
+          <p class="project-meta" style="color: var(--accent-color); font-weight: bold; font-size: 1rem;">
+            [SOLE AUTHOR]
+          </p>
+          <img src="assets/EPOS_PUBLICATION_SCREENSHOOT.png" alt="EPOS Poster Acceptance"
+            style="width: 100%; border-radius: 4px; margin: 1rem 0; border: 1px solid var(--border-color);">
+          <p><strong>The European Congress of Radiology (ECR) is one of the largest and most prestigious medical and
+              scientific meetings in the world.</strong> As the sole author of this research, I conducted an
+            interpretability-driven audit of clinical imaging models to advance <strong>AI safety</strong> in
+            healthcare. By focusing on artifact-driven shortcut discovery, this work reveals how deep learning models
+            trained for pneumonia detection often rely on spurious visual confounders rather than genuine medical
+            pathology. Uncovering these hidden failure modes is a critical step toward building <strong>trustworthy
+              AI</strong> systems that are safe, robust, and reliable for real-world clinical deployment.</p>
+          <a href="https://dx.doi.org/10.26044/ecr2026/C-30021" class="btn" target="_blank"
+            rel="noopener noreferrer">View ECR 2026 Poster</a>
         </div>
 
         <div class="project-card">
@@ -86,4 +127,5 @@
     </footer>
   </div>
 </body>
+
 </html>
